@@ -78,3 +78,20 @@
 //   format: "mp3",
 //   duration: 5,
 // };
+
+// // Merge Interface
+
+// interface Book {
+//   name: string;
+//   price: number;
+// }
+
+// interface Book {
+//   size: number;
+// }
+
+// const book: Book = {
+//     name:'Atomic Habbits',
+//     price:200,
+//     size: 2,
+// };
