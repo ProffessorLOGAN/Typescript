@@ -48,3 +48,33 @@
 //   isActive: true,
 //   transaction: [transaction],
 // };
+
+// Extend
+
+// interface Book {
+//   name: string;
+//   price: number;
+// }
+
+// interface EBook extends Book {
+//   //   name: string;
+//   //   price: number;
+//   fileSize: number;
+//   format: string;
+// }
+
+// interface AudioBook extends EBook {
+//   //   name: string;
+//   //   price: number;
+//   //   fileSize: number;
+//   //   format: string;
+//   duration: number;
+// }
+
+// const book: AudioBook = {
+//   name: "Atomic habits",
+//   price: 250,
+//   fileSize: 5,
+//   format: "mp3",
+//   duration: 5,
+// };
