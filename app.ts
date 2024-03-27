@@ -203,3 +203,42 @@
 // const users = await fetchData<IUser[]>('/users');
 // users[0].age;
 // })();
+
+// Structural typing or Duck typing
+
+// interface ICredential {
+//   username: string;
+//   password: string;
+//   isAdmin?: boolean;
+// }
+
+// function login(credentials: ICredential): boolean {
+//   console.log(credentials);
+//   return true;
+// }
+
+// const user: ICredential = {
+//   username: "Tansen Keshri",
+//   password: "secret",
+//   isAdmin: true,
+// };
+
+// login(user);
+
+// interface IAuth {
+//   username: string;
+//   password: string;
+//   login(username: string, password: string): boolean;
+// }
+
+// const auth : IAuth = {
+//   username: "tansen",
+//   password: "secret",
+//   login(username: string, password: string) {
+//     return true;
+//   },
+// };
+
+// // Inference
+// let num = 1;
+// let num2 = 'tk';
