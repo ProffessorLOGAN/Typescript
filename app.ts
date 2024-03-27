@@ -116,3 +116,90 @@
 // }
 
 // console.log(getFirstThree([1,3,5,6,7]));
+
+// Generics
+
+// function logString(arg) {
+//     console.log(arg);
+//     return arg;
+// }
+
+// logString('logged in');
+
+// function logNumber(arg:number){
+//     console.log(arg);
+//     return arg;
+// }
+
+// function logArray(arg: any[]){
+//     console.log(arg);
+//     return arg;
+// }
+
+// function logAnything<T>(arg: T): T{
+//     console.log(arg);
+//     return arg;
+// }
+
+// logArray([4,3]);
+
+// interface HasAge {
+//   age: number;
+// }
+
+// function getOldest<T extends HasAge>(people: T[]): T {
+//   return people.sort((a,b) => b.age - a.age)[0];
+// }
+
+// const people: HasAge[] = [{ age: 30 }, { age: 40 }, { age: 10 }];
+
+// interface Player {
+//     name: string;
+//     age: number;
+// }
+
+// const Players:Player[] = [
+//   { name: "John", age: 30 },
+//   { name: "jane ", age: 35 },
+//   { name: "joe", age: 16 },
+// ];
+
+// //Assertion
+// // const person = getOldest(Players) as Player;
+
+// const person = getOldest(Players);
+// //Generics
+// person.age
+
+// interface IPost {
+//   title: string;
+//   id: number;
+//   description: string;
+// }
+
+// interface IUser {
+//   id: number;
+//   name: string;
+//   age: number;
+// }
+
+// const fetchPostData = async (path: string): Promise<IPost[]> => {
+//   const response = await fetch(`https://example.com${path}`);
+//   return response.json();
+// };
+
+// const fetchUserData = async (path: string): Promise<IUser[]> => {
+//   const response = await fetch(`https://example.com${path}`);
+//   return response.json();
+// };
+
+// const fetchData = async <ResultType>(path : string ): Promise<ResultType> => {
+//     const response = await fetch(`https://example.com${path}`);
+//     return response.json();
+// }
+
+// (async () => {
+// //   const posts = await fetchPostData("/posts");
+// const users = await fetchData<IUser[]>('/users');
+// users[0].age;
+// })();
